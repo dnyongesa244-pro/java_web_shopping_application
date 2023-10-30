@@ -15,5 +15,6 @@
         <h1>Welcome to home page</h1>
         <button><a href="addproduct.jsp">ADD product</a></button>
         <button><a href="productpage.jsp">view products</a></button>
+        <button><a href="http://localhost/shoppingapp/myindex.php">view products</a></button>
     </body>
 </html>
