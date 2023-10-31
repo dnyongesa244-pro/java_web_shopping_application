@@ -73,7 +73,7 @@
         <input type="number" name="price" id="price"><br>
         
         <label for="productid">Price id</label>
-        <input type="number" name="id" placeholder="product will be given a random id" readonly><br>
+        <input type="number" name="id" placeholder="product will be given a random id" readonly style="width: fit-content"><br>
         <button type="submit" id="submit">ADD</button>
     </form>
     <button><a href="homepage.jsp">Back</a></button>
@@ -82,6 +82,8 @@
         <p>Daniel - IN13/00044/21</p>
         <p>Granton - IN13/00036/21</p>
         <p>Aoron - IN13/00030/21</p>
+        <p>Ezekiah - IN13/00037/21</p>
+        <p>Victor - IN13/00032/21</p>
     </footer>
 </body>
 </html>
