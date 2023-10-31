@@ -78,9 +78,9 @@
         <label for="securityQuestion">Security question</label>
         <select name="securityQuestion" id="securityQuestion">
             <option value="petname">Pet Name</option> 
-            <option value="favorite_actor">Best Actor</option>
+            <option value="favorite_actor">Best Actor</option> 
             <option value="place_of_birth">Place of birth</option> 
-            <option value="place_of_birth">Place of birth</option>
+            <option value="bestfriend">Best Friend</option> 
         </select><br>    
 
         <label for="answer">Answer</label>
@@ -116,5 +116,6 @@
             window.history.back();
         }
     </script>
+    
 </body>
 </html>

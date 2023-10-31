@@ -121,5 +121,11 @@
         <button type="submit" id="submit">Create Account</button>
         <button type="button" ><a href="login.jsp">Back</a></button>
     </form>
+        <footer>
+        <h4>Developers</h4>
+        <p>Daniel - IN13/00044/21</p>
+        <p>Granton - IN13/00036/21</p>
+        <p>Aoron - IN13/00030/21</p>
+    </footer>
 </body>
 </html>

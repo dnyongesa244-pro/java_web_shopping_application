@@ -31,7 +31,7 @@
     </div>
     <form action="loginservlet1" method="post">
         <table>
-            <tr><td>Username</td><td><input type="text" name="txtname"></td></tr>
+            <tr><td>Email</td><td><input type="text" name="txtname"></td></tr>
             <tr><td>Password</td><td><input type="password" name="txtpassword"></td></tr>
             <tr><td><input type="submit" value="Submit"></td><td><input type="reset"></td></tr>
         </table>
