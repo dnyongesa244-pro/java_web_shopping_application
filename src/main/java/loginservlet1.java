@@ -42,7 +42,7 @@ public class loginservlet1 extends HttpServlet {
                     if ("admin".equals(accessLevel)) {
         // Display a confirmation page
         out.println("Do you want to log in as an admin?");
-        out.println("<form method='post' action='adminaproval.jsp'>");
+        out.println("<form method='post' action='http://localhost/shoppingapp/admin.php'>");
         out.println("<input type='hidden' name='txtname' value='" + Email + "'>");
         out.println("<input type='hidden' name='txtpassword' value='" + password + "'>");
         out.println("<button type='submit' name='adminChoice' value='yes'>Yes</button>");

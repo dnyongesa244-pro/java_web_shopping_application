@@ -60,6 +60,7 @@ public class addproductservlet extends HttpServlet {
             String productName = request.getParameter("productname");
             String quantity = request.getParameter("quantity");
             String price = request.getParameter("price");
+            String state = "pending";
 
             String jdbcUrl = "jdbc:mysql://localhost:3306/eshoping";
             String dbUsername = "root";
@@ -69,12 +70,13 @@ public class addproductservlet extends HttpServlet {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
 
-                String query = "INSERT INTO product_for_sale (product_id, product_name, quantity, price) VALUES (?, ?, ?, ?)";
+                String query = "INSERT INTO product_for_sale (product_id, product_name, quantity, price, Status) VALUES (?, ?, ?, ?, ?)";
                 PreparedStatement preparedStatement = conn.prepareStatement(query);
                 preparedStatement.setString(1, productid);
                 preparedStatement.setString(2, productName);
                 preparedStatement.setString(3, quantity);
                 preparedStatement.setString(4, price);
+                preparedStatement.setString(5, state);
 
                 int rowsInserted = preparedStatement.executeUpdate();
 
