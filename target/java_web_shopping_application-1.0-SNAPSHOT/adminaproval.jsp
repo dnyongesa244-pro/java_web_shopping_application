@@ -1,17 +1,13 @@
-<%-- 
-    Document   : adminaproval
-    Created on : Oct 31, 2023, 11:59:36 AM
-    Author     : dkoko
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello admin</h1>
-    </body>
-</html>
+<%@ page import="jakarta.servlet.RequestDispatcher" %>
+<%
+    String adminChoice = request.getParameter("adminChoice");
+    RequestDispatcher rd = null;
+    if (adminChoice.equals("yes")) {
+        // Redirect to admin page
+        rd = request.getRequestDispatcher("admin.jsp");
+    } else if (adminChoice.equals("no")) {
+        // Redirect to home page
+        rd = request.getRequestDispatcher("homepage.jsp");
+    }
+    rd.forward(request, response);
+%>
