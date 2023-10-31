@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class loginservlet1 extends HttpServlet {
+public class admin extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,20 +40,20 @@ public class loginservlet1 extends HttpServlet {
                     // Assuming "admin" is the value for admin access in the access_level column
                     String accessLevel = rs.getString("access_level");
                     if ("admin".equals(accessLevel)) {
-        // Display a confirmation page
-        out.println("Do you want to log in as an admin?");
-        out.println("<form method='post' action='adminaproval.jsp'>");
-        out.println("<input type='hidden' name='txtname' value='" + Email + "'>");
-        out.println("<input type='hidden' name='txtpassword' value='" + password + "'>");
-        out.println("<button type='submit' name='adminChoice' value='yes'>Yes</button>");
-        out.println("<button type='submit' name='adminChoice' value='no'>No</button>");
-        out.println("</form>");
-    } else {
-        // Proceed as a regular user
-        out.println("User Login Success!");
-        RequestDispatcher rd = request.getRequestDispatcher("homepage.jsp");
-        rd.forward(request, response);
-    }
+                        // Display a confirmation page
+                        out.println("Do you want to log in as an admin?");
+                        out.println("<form method='post' action='admin.jsp'>");
+                        out.println("<input type='hidden' name='txtname' value='" + Email + "'>");
+                        out.println("<input type='hidden' name='txtpassword' value='" + password + "'>");
+                        out.println("<button type='submit' name='adminChoice' value='yes'>Yes</button>");
+                        out.println("<button type='submit' name='adminChoice' value='no'>No</button>");
+                        out.println("</form>");
+                    } else {
+                        // Proceed as a regular user
+                        out.println("User Login Success!");
+                        RequestDispatcher rd = request.getRequestDispatcher("homepage.jsp");
+                        rd.forward(request, response);
+                    }
                 } else { 
                     out.println("<font color=red size=20>Login Failed<br>");
                     out.println("<a href=login.jsp>Try Again!?");

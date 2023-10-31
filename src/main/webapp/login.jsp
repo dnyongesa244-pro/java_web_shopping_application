@@ -39,6 +39,7 @@
             <tr><td><input type="submit" value="Submit"></td><td><input type="reset"></td></tr>
         </table>
     </form>
+    <button><a href="admin.jsp">Login as admin</a></button>
     <button><a href="singup.jsp">Singup</button>
     <button><a href="forgotpassword.jsp">Forgot password</button
 </body>
