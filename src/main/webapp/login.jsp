@@ -40,6 +40,7 @@
         </table>
     </form>
     <button><a href="singup.jsp">Singup</button>
+    <button><a href="admin.jsp">login as admin</a></button>
     <button><a href="forgotpassword.jsp">Forgot password</button
 </body>
 </html>

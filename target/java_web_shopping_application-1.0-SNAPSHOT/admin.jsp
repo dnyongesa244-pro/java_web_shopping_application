@@ -1,17 +1,44 @@
-<%-- 
-    Document   : admin
-    Created on : Oct 31, 2023, 12:51:21 PM
-    Author     : dkoko
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello welcome admin</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .div1 {
+            text-align: center;
+            width: 100%; 
+            background-color: aqua;
+            padding: 0;
+        }
+        h1 {
+            margin: 0; 
+        }
+        form {
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>LOGIN</h1>
+    </div>
+    <form action="adminlogin" method="post">
+        <table>
+            <tr><td>Email</td><td><input type="text" name="txtname"></td></tr>
+            <tr><td>Password</td><td><input type="password" name="txtpassword"></td></tr>
+            <tr><td><input type="submit" value="Submit"></td><td><input type="reset"></td></tr>
+        </table>
+    </form>
+    <button><a href="forgotpassword.jsp">Forgot password</button
+</body>
 </html>

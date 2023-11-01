@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class loginservlet1 extends HttpServlet {
+public class adminlogin extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,18 +37,24 @@ public class loginservlet1 extends HttpServlet {
 
                 ResultSet rs = preparedStatement.executeQuery();
                 if (rs.next()) {
-                    // User Login Success!
-                    out.println("User Login Success!");
-                    RequestDispatcher rd = request.getRequestDispatcher("homepage.jsp");
-                    rd.forward(request, response);
-                } else { 
-                    // Handle login failure
+                    // Assuming "admin" is the value for admin access in the access_level column
+                    String accessLevel = rs.getString("access_level");
+                    if ("admin".equals(accessLevel)) {
+                        // Redirect to the admin page immediately
+                        response.sendRedirect("http://localhost/shoppingapp/admin.php");
+                    } else {
+                        // Proceed as a regular user
+                        out.println("User Login Success!");
+                        RequestDispatcher rd = request.getRequestDispatcher("homepage.jsp");
+                        rd.forward(request, response);
+                    }
+                } else {
                     out.println("<font color=red size=20>Login Failed<br>");
                     out.println("<a href=login.jsp>Try Again!?");
                 }
 
                 conn.close();
-            } catch (Exception e) { 
+            } catch (Exception e) {
                 out.println("Error: " + e.getMessage());
             }
         }

@@ -31,6 +31,10 @@
         <servlet-name>admin</servlet-name>
         <servlet-class>admin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>adminlogin</servlet-name>
+        <servlet-class>adminlogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginservlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
@@ -58,6 +62,10 @@
     <servlet-mapping>
         <servlet-name>admin</servlet-name>
         <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminlogin</servlet-name>
+        <url-pattern>/adminlogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
