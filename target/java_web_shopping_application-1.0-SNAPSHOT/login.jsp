@@ -61,11 +61,10 @@
             <tr><td><input type="submit" value="Submit"></td><td><input type="reset"></td></tr>
         </table>
     </form>
-<<<<<<< HEAD
+
     <button><a href="singup.jsp">Singup</button>
     <button><a href="admin.jsp">login as admin</a></button>
     <button><a href="forgotpassword.jsp">Forgot password</button
-=======
     <!-- Your other HTML content -->
     <button><a href="signup.jsp">Signup</a></button>
     <button><a href="forgotpassword.jsp">Forgot password</a></button>
@@ -90,6 +89,5 @@
             document.body.style.color = this.value;
         });
     </script>
->>>>>>> e0ccbdcf54cfd31f2ffa25d8277f767a7449624a
 </body>
 </html>
